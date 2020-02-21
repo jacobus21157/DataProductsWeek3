@@ -1,0 +1,23 @@
+---
+title: "Week 3 Project"
+author: "P.W. Jacobus"
+date: "2/21/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plotly)
+```
+
+## Plotly Demonstration | Feb 21, 2020
+
+```{r plotly, echo=FALSE, message=FALSE}
+
+x <- list(title= "Dispacement (cc)")
+
+p <- plot_ly(data=mtcars, x = ~disp, y = ~mpg, color = ~cyl) %>% 
+     layout(title = "MTCARS - MPG vs. Displacement", xaxis = x)
+p
+```
+
